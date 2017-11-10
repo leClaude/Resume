@@ -1,0 +1,52 @@
+*{
+    transition-duration: 0.3s ;
+}
+body {
+    background-color: grey ;
+}
+header {
+    text-align: right;
+}
+    header nav ul {
+        display: inline-flex;
+    }
+        header nav ul li {
+            justify-content: space-around;
+            list-style: none;
+        }
+            header nav ul li a {
+                display: block;
+                padding: 0.2rem 1rem 0.2rem 1rem;
+                margin-right: 2rem ;
+                margin-top: 1rem ;
+                border: 1px solid white ;
+                text-decoration: none;
+                color: white ;
+
+            }
+            header nav ul li a:hover {
+                text-decoration: none;
+                color: grey ;
+                background-color: lightgrey ;
+            }
+#home {
+    background-image: url(../img/laptop.jpeg) ;
+    background-size: cover;
+    padding-top: 3rem ;
+}
+    #home h1 {
+        color: white ;
+        text-align: right;
+        margin-right: 10rem;
+    }
+    #home h1+p {
+        color: white ;
+        text-align: right;
+        margin-right: 10rem;
+    }
+    #home img{
+        margin-top: 3rem ;
+        opacity : 0.5 ;
+        height : 6rem ;
+        margin-bottom: 2rem ;
+    }
