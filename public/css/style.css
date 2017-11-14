@@ -1,52 +1,466 @@
-*{
-    transition-duration: 0.3s ;
-}
+/*-------------General properties-------------------*/
 body {
+    background-color: #efefef ;
+}
+.main {
     background-color: grey ;
+}
+section {
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+    padding-top: 2rem ;
+    padding-bottom: 2rem ;
+}
+article {
+    padding-bottom: 2rem ;
+}
+h2 {
+    padding-bottom: 3rem ;
 }
 header {
     text-align: right;
+    display: inline-flex;
+    width : 100% ;
+    justify-content: space-between;
 }
-    header nav ul {
-        display: inline-flex;
-    }
-        header nav ul li {
-            justify-content: space-around;
-            list-style: none;
-        }
-            header nav ul li a {
-                display: block;
-                padding: 0.2rem 1rem 0.2rem 1rem;
-                margin-right: 2rem ;
-                margin-top: 1rem ;
-                border: 1px solid white ;
-                text-decoration: none;
-                color: white ;
+/*----------logo-----------------*/
+.logo {
+    margin-top: 1rem ;
+    width: 4rem ;
+    height: 4rem ;
+    display: flex;
+    flex-wrap: wrap;
+    transform: rotate(45deg);
+    font-size: 0.7rem ;
+}
+.logo>div {
+    width : 1.96rem ;
+    height: 1.97rem ;
+    text-align: center;
+    line-height: 1.92rem ;
+}
+.l1{
+    border-right: 1px solid black ;
+    border-bottom: 1px solid black
+}
+.l2 {
+    border-left: 1px solid black ;
+    border-bottom : 1px solid black ;
+}
+.l3 {
+    border-right: 1px solid black ;
+    border-top: 1px solid black ;
+}
+.l4{
+    border-left: 1px solid black ;
+    border-top: 1px solid black ;
+}
+.logo>div>div{
+    transform: rotate(-45deg);
+}
+/*-------------nav------------------*/
+header #back {
+    display: block;
+    height: 6rem ;
+    line-height: 6rem ;
+    font-size: 2rem ;
+    padding-right: 3rem ;
+    color: black ;
+    text-decoration: none;
 
-            }
-            header nav ul li a:hover {
-                text-decoration: none;
-                color: grey ;
-                background-color: lightgrey ;
-            }
+}
+nav{
+    height: 6rem ;
+    line-height: 2rem ;
+    vertical-align: bottom;
+}
+.bignav{
+    display: none ;
+}
+.bignav ul{
+    width: 100%;
+    display: inline-flex;
+}
+.bignav ul li {
+    justify-content: space-around;
+    list-style: none;
+}
+nav ul li a {
+    display: inline-block;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    margin-right: 2rem ;
+    margin-top: 2rem ;
+    border: 1px solid white ;
+    text-decoration: none;
+    text-align: center;
+    color: white ;
+}
+nav ul li a:hover {
+    text-decoration: none;
+    color: grey ;
+    background-color: lightgrey ;
+}
+header button{
+    height : 2rem ;
+    margin : 2rem 2rem 2rem 0 ;
+    background-color: grey ;
+    border: 1px solid black ;
+}
+.dropdown-menu{
+    background-color: grey ;
+    text-align: center;
+}
+.dropdown-menu a{
+    background-color: grey ;
+    text-align: center;
+    width : 80% ;
+    margin: auto;
+    margin-bottom: 0.5rem ;
+}
+/*-----------home-----------------*/
+#home .autoplay {
+    transition-duration: 0 ;
+    width : 80% ;
+    margin: auto ;
+}
 #home {
     background-image: url(../img/laptop.jpeg) ;
     background-size: cover;
     padding-top: 3rem ;
 }
-    #home h1 {
-        color: white ;
+#home h1 {
+    color: white ;
+    text-align: center;
+}
+#home h1+p {
+    color: white ;
+    text-align: center;
+}
+#home img{
+    margin-top: 3rem ;
+    opacity : 0.5 ;
+    height : 6rem ;
+    margin-bottom: 2rem ;
+}
+#about .selfy {
+    padding-top: 1rem ;
+}
+#about h2 {
+    color: white ;
+    margin-bottom: 1rem ;
+}
+#about .selfy {
+    background-image: url('../img/selfy.jpg');
+    background-size: cover;
+    width : 6rem ;
+    height : 6rem ;
+    margin: auto;
+    margin-top: 2rem ;
+    margin-bottom: 2rem ;
+}
+#resume {
+    background-color: lightgrey ;
+}
+#resume>h2 {
+    padding-top: 2rem ;
+    margin-bottom: 1rem ;
+}
+#resume h3 {
+    padding-left: 1rem ;
+    font-style: italic;
+    font-size: 1.5rem ;
+    margin-bottom: 1rem ;
+}
+.technical ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2rem ;
+}
+.technical li {
+    display: block;
+    width : 12rem ;
+    list-style: none;
+}
+.technical p {
+    display: inline-block;
+    margin-bottom: 0.2rem ;
+}
+.soft ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2rem ;
+}
+.soft li {
+    display: block;
+    width : 14rem ;
+    height: 2rem ;
+    line-height: 2rem ;
+    list-style: none;
+}
+.education ul {
+    padding-left: 1rem ;
+}
+.education ul>li {
+    list-style: none;
+}
+.education ul>li>div {
+    display: flex;
+    justify-content: space-between;
+}
+.education span {
+    width : 20% ;
+    font-weight: bold;
+    font-size: 0.7rem ;
+}
+.education a {
+    text-decoration: none;
+    color: black ;
+    font-weight: bold;
+    font-size: 0.7rem ;
+    width : 60% ;
+}
+.education p {
+    font-style: italic;
+    font-size: 0.7rem ;
+    padding-left: 20% ;
+}
+.education i {
+    font-size: 0.7rem ;
+    width: 20% ;
+}
+.experience ul {
+    padding-left: 1rem ;
+}
+.experience ul>li {
+    list-style: none;
+}
+.exp {
+    display: inline-flex;
+    justify-content: space-between;
+    text-align: left;
+    width : 100% ;
+    margin-top: 0.5rem ;
+}
+.exp span {
+    width : 20% ;
+    font-weight: bold;
+    font-size: 0.7rem ;
+    padding: 0 ;
+}
+.exp a {
+    width: 20% ;
+    font-size: 0.7rem ;
+    color: black ;
+    font-weight: bold;
+    padding-left: 0rem ;
+}
+.exp h4 {
+    font-weight: bold;
+    font-size: 0.7rem ;
+    width : 60% ;
+    padding-left: 1rem ;
+}
+.exp i {
+    display: none;
+    font-size: 0.7rem ;
+    width: 20% ;
+}
+.experience p {
+    font-size: 0.7rem ;
+    font-weight: bold;
+    padding-left: 45% ;
+    margin-bottom: 0 ;
+}
+.experience ul>li>ul {
+    font-size: 0.7rem ;
+    list-style: none;
+    font-style: italic;
+    padding-left: 20% ;
+}
+.languages ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem ;
+}
+.languages ul>li {
+    display: block;
+    width : 6rem ;
+}
+.languages ul>li>p {
+    display: inline;
+}
+
+#social>h2 {
+    padding-top: 2rem ;
+    padding-left: 1rem ;
+    margin-bottom: 1rem ;
+    color: white ;
+}
+footer .links {
+    width : 50% ;
+    margin : auto ;
+    display: flex;
+    justify-content: space-around;
+}
+footer .links>a {
+    color : white ;
+    font-size: 2rem ;
+}
+
+footer .share {
+    text-align: center;
+    font-size: 0.7rem ;
+    padding-bottom: 1rem ;
+}
+footer .share>h3 {
+    color: white ;
+    font-size: 1rem ;
+}
+footer .share>a {
+    color: black ;
+}
+footer p {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.5rem ;
+    padding-bottom: 1rem ;
+    margin-bottom: 0 ;
+}
+#contact {
+    background-color: lightgrey ;
+    padding-left: 10% ;
+}
+#contact p {
+    font-style: italic;
+}
+#contact address {
+    padding-left: 1rem ;
+    border-left: 1px solid black ;
+}
+#contact iframe {
+    width : 90% ;
+    height : 15rem ;
+}
+#contact label {
+    display: block;
+    margin-top: 1rem ;
+}
+#contact textarea {
+    width : 90% ;
+}
+#contact .g-recaptcha {
+    margin-top: 1rem ;
+    font-size: 0.7rem ;
+    width : 90% ;
+}
+#contact button {
+    margin-top: 1rem ;
+}
+/*-------------Tablette-------------------*/
+@media screen and (min-width:800px) {
+    .bignav {
+        display: inline-flex;
+    }
+    .dropdown{
+        display: none;
+    }
+    #home>h1 {
         text-align: right;
-        margin-right: 10rem;
+        padding-right: 8rem ;
     }
-    #home h1+p {
-        color: white ;
+    #home h1+p{
         text-align: right;
-        margin-right: 10rem;
+        padding-right: 8rem;
     }
-    #home img{
-        margin-top: 3rem ;
-        opacity : 0.5 ;
-        height : 6rem ;
-        margin-bottom: 2rem ;
+    .exp i {
+        display: block;
     }
+    #about h2 {
+        text-align: center;
+    }
+    #about p {
+        border-left: 1px solid black ;
+        padding-left: 1rem ;
+    }
+    #about h2+p {
+        margin-right: 10rem ;
+    }
+    #about p+p {
+        margin-left: 10rem ;
+
+    }
+    #resume h2 {
+        text-align: center;
+    }
+    #resume>.education span {
+        font-size: 1rem ;
+    }
+    #resume>.education a {
+        font-size: 1rem ;
+    }
+    #resume>.education p {
+        font-size: 1rem ;
+    }
+    #resume>.education i {
+        font-size: 1rem ;
+    }
+    #resume .exp span {
+        font-size: 1rem ;
+    }
+    #resume .exp a {
+        font-size: 1rem ;
+    }
+    #resume .exp h4 {
+        font-size: 1rem ;
+    }
+    #resume .exp i {
+        font-size: 1rem ;
+    }
+    #resume .experience p {
+        font-size: 1rem ;
+        margin-left: -10% ;
+    }
+    #resume .experience ul>li>ul {
+        font-size: 1rem ;
+        margin-left: 1rem ;
+    }
+    #social h2 {
+        text-align: center;
+    }
+    #contact h2 {
+        text-align: center;
+    }
+    #contact .loc {
+        width : 80% ;
+        display: flex;
+        justify-content: space-between;
+        flex-direction : row-reverse;
+    }
+    #contact address {
+        display: inline-block;
+        width : 30% ;
+        border : none ;
+    }
+    #contact iframe {
+        display: inline-block;
+        width: 65% ;
+    }
+    #contact form {
+        width : 80% ;
+    }
+    #contact fieldset {
+        width : 100% ;
+    }
+    #contact label,input {
+        display: inline-flex;
+        width : 30% ;
+    }
+}
+/*-------------Desktop-------------------*/
+@media screen and (min-width:1200px) {
+    .main {
+        width : 1200px;
+        margin: auto;
+    }
+}

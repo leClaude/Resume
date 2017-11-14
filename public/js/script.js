@@ -1,8 +1,11 @@
-$(function(){
+$(function(){ //JQUERY
+
+    // autoplay JQUERY UI
     $('.autoplay').slick({
-      slidesToShow: 4,
+      slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 1500,
+      autoplaySpeed: 1000,
     });
-}) ; // fin de JQUERY - ne pas supprimer
+
+}) ; // END OF JQUERY - do not delete
